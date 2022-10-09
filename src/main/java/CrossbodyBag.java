@@ -5,7 +5,26 @@
  * You may find the readings in chapter 3. Relationships between Classes
  * helpful while working through this exercise.
  */
+public class CrossbodyBag extends Bag{
+    private int numOfStraps;
+    public CrossbodyBag(String color_, int capacity_, int straps){
+        super(color_,capacity_);
+        numOfStraps = straps;
+    }
+    public int getNumberOfStraps(){
+        return this.numOfStraps;
+    }
 
+    @Override
+    public void enhance() {
+        super.increaseCapacity(2);
+    }
+
+    public String toString() {
+        return this.getColor() + " Crossbody Bag with " + this.numOfStraps + " straps (" + this.getNumberOfContents() + " / " +
+                this.getCapacity() + ")";
+    }
+}
 /*
  * TODO: Create a public class named CrossbodyBag which is a subclass of Bag
  *       In addition to the attributes in Bag, the CrossbodyBag should have an
