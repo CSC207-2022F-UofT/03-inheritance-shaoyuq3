@@ -26,9 +26,15 @@ class BagMain {
                     bag.enhance();
                 }
             }
-
         }
+        else {
+            for (Bag bag : bags) {
+                bag.enhance();
+            }
+        }
+
     }
+
 
     /**
      * TODO: Implement this method
